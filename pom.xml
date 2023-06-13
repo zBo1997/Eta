@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <groupId>com.momo.eta</groupId>
+    <artifactId>eta-dependencies-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>./eta-dependencies-parent/pom.xml</relativePath>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>eta-information</artifactId>
+  <packaging>pom</packaging>
+  <name>${project.artifactId}</name>
+  <description>eta-info资讯项目</description>
+
+  <licenses>
+    <license>
+      <name>Apache 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+      <comments>A business-friendly OSS license</comments>
+    </license>
+  </licenses>
+
+  <modules>
+    <module>eta-information-server</module>
+    <module>eta-dependencies-parent</module>
+  </modules>
+
+
+</project>

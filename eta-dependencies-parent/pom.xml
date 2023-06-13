@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.7.6</version>
+    <relativePath/>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+  <description>eta依赖管理项目</description>
+
+  <groupId>com.momo.eta</groupId>
+  <artifactId>eta-dependencies-parent</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <properties>
+    <eta-project.version>1.0.0-SNAPSHOT</eta-project.version>
+    <theta.version>1.0.0-SNAPSHOT</theta.version>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>com.momo.basic</groupId>
+      <artifactId>theta-cache</artifactId>
+      <version>${theta.version}</version>
+      <scope>pom</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.momo.basic</groupId>
+      <artifactId>theta-base</artifactId>
+      <version>${theta.version}</version>
+      <scope>pom</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.momo.basic</groupId>
+      <artifactId>theta-core</artifactId>
+      <version>${theta.version}</version>
+      <scope>pom</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.momo.basic</groupId>
+      <artifactId>theta-utils</artifactId>
+      <version>${theta.version}</version>
+      <scope>pom</scope>
+    </dependency>
+
+  </dependencies>
+
+</project>
