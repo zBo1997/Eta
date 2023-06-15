@@ -7,7 +7,6 @@ import com.momo.eta.model.vo.CarouselVO;
 import com.momo.eta.service.CarouselService;
 import com.momo.theta.Result;
 import java.util.List;
-import javax.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -46,11 +45,10 @@ public class HomeController {
   /**
    * 首页轮播图
    *
-   * @param request
-   * @return
+   * @return 首页轮播图查询
    */
   @GetMapping("getCarousel")
-  public Result<List<CarouselVO>> getCarousel(HttpServletRequest request) {
+  public Result<List<CarouselVO>> getCarousel() {
     log.info("首页轮播图查询");
     var disCarouselList = carouselService.getCarousel();
     var carouselVOList = BeanUtil.copyToList(disCarouselList, CarouselVO.class);
@@ -60,12 +58,11 @@ public class HomeController {
   /**
    * 获取首页文章
    *
-   * @param request
-   * @return
+   * @param queryType 请求体
+   * @return 首页文章查询查询类型
    */
   @GetMapping("getArticle/{queryType}")
-  public Result<List<ArticleVO>> getArticle(HttpServletRequest request,
-      @PathVariable("queryType") String queryType) {
+  public Result<List<ArticleVO>> getArticle(@PathVariable("queryType") String queryType) {
     log.info("首页文章查询查询类型:{}", queryType);
     var articleBean = articleHandler.getArticleBean(queryType);
     var execute = articleHandler.execute(articleBean);
@@ -75,11 +72,10 @@ public class HomeController {
   /**
    * 获取首页文章数量
    *
-   * @param request
-   * @return
+   * @return 获取首页文章数量
    */
   @GetMapping("getArticleCount")
-  public Result<String> getArticle(HttpServletRequest request) {
+  public Result<String> getArticle() {
     log.info("获取首页文章数量");
     var articleCount = articleHandler.getArticleCount();
     return Result.success(articleCount);
