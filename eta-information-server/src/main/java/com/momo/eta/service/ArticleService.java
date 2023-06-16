@@ -2,6 +2,7 @@ package com.momo.eta.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.momo.eta.entity.Article;
+import java.io.Serializable;
 import java.util.List;
 
 /**

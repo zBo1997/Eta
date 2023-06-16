@@ -1,5 +1,15 @@
 server:
   port: 8181
+  tomcat:
+    # 当所有可能的请求处理线程都在使用时，传入连接请求会被放进队列中等待，等待队列的最大队列长度。（若超出这个这个数则会CONFUSED_CONNECTION）
+    accept-count: 5
+    # 服务器在任何给定时间接受和处理的最大连接数。 一旦达到限制，操作系统仍然可以根据“acceptCount”属性接受连接。
+    max-connections: 100
+    threads:
+      #最小线程数（也是Tomcat初始化的连接数）
+      min-spare: 20
+      #服务器在给定时间能接受的连接数为server.tomcat.max-connections,最大工作线程数（注意！但并不是同时在工作）
+      max: 100
 spring:
   lifecycle:
     timeout-per-shutdown-phase: 60s
@@ -27,7 +37,7 @@ spring:
         timeBetweenEvictionRunsMillis: 6000
         poolPreparedStatements: true
         logAbandoned: true
-        removeAbandoned: true
+        removeAbandoned: false
         connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
         filters: stat,wall,log4j2
   redis:
@@ -44,16 +54,11 @@ spring:
     #是否是cluster模式，[true|false] ，缺省为false，即是单节点模式
     multi-nodes: false
     host: localhost
-    #password: momo@1234
-    port: 6379
-    cluster:
-      nodes: 12.3.35.31:8001,12.3.35.31:8002,12.3.35.32:8001,12.3.35.32:8002,12.3.35.33:8001,12.3.35.33:8002
-      max-redirects: 3
     lettuce:
       pool:
-        max-active: 10
-        max-idle: 5
-        min-idle: 1
+        max-active: 100
+        max-idle: 50
+        min-idle: 10
     timeout: 3000
 mybatis-plus:
   type-handlers-package: com.momo.eta.config
