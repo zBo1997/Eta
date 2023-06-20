@@ -54,11 +54,12 @@ spring:
     #是否是cluster模式，[true|false] ，缺省为false，即是单节点模式
     multi-nodes: false
     host: localhost
-    lettuce:
+    jedis:
       pool:
         max-active: 100
         max-idle: 50
         min-idle: 10
     timeout: 3000
+    connect-timeout: 5000
 mybatis-plus:
   type-handlers-package: com.momo.eta.config
