@@ -15,12 +15,12 @@
 
   <groupId>com.momo.eta</groupId>
   <artifactId>eta-dependencies-parent</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <packaging>pom</packaging>
 
   <properties>
-    <eta-project.version>1.0.0-SNAPSHOT</eta-project.version>
-    <theta.version>1.0.0-SNAPSHOT</theta.version>
+    <eta-project.version>1.0.0</eta-project.version>
+    <theta.version>1.0.0</theta.version>
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
   </properties>
@@ -28,28 +28,28 @@
   <dependencies>
 
     <dependency>
-      <groupId>com.momo.basic</groupId>
+      <groupId>io.github.zbo1997</groupId>
       <artifactId>theta-cache</artifactId>
       <version>${theta.version}</version>
       <scope>pom</scope>
     </dependency>
 
     <dependency>
-      <groupId>com.momo.basic</groupId>
+      <groupId>io.github.zbo1997</groupId>
       <artifactId>theta-base</artifactId>
       <version>${theta.version}</version>
       <scope>pom</scope>
     </dependency>
 
     <dependency>
-      <groupId>com.momo.basic</groupId>
+      <groupId>io.github.zbo1997</groupId>
       <artifactId>theta-core</artifactId>
       <version>${theta.version}</version>
       <scope>pom</scope>
     </dependency>
 
     <dependency>
-      <groupId>com.momo.basic</groupId>
+      <groupId>io.github.zbo1997</groupId>
       <artifactId>theta-utils</artifactId>
       <version>${theta.version}</version>
       <scope>pom</scope>
