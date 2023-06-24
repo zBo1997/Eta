@@ -20,7 +20,7 @@
 
   <properties>
     <eta-project.version>1.0.0</eta-project.version>
-    <theta.version>1.0.0</theta.version>
+    <theta.version>1.0.0-SNAPSHOT</theta.version>
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
   </properties>
