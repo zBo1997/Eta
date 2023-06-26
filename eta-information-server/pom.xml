@@ -23,25 +23,25 @@
     <dependency>
       <groupId>io.github.zbo1997</groupId>
       <artifactId>theta-cache</artifactId>
-      <version>1.0.0</version>
+      <version>1.0.2</version>
     </dependency>
 
     <dependency>
       <groupId>io.github.zbo1997</groupId>
       <artifactId>theta-base</artifactId>
-      <version>1.0.0</version>
+      <version>1.0.2</version>
     </dependency>
 
     <dependency>
       <groupId>io.github.zbo1997</groupId>
       <artifactId>theta-core</artifactId>
-      <version>1.0.0</version>
+      <version>1.0.2</version>
     </dependency>
 
     <dependency>
       <groupId>io.github.zbo1997</groupId>
       <artifactId>theta-utils</artifactId>
-      <version>1.0.0</version>
+      <version>1.0.2</version>
     </dependency>
 
   </dependencies>
