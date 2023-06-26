@@ -7,6 +7,7 @@ import com.momo.eta.model.vo.CarouselVO;
 import com.momo.eta.service.CarouselService;
 import com.momo.theta.Result;
 import java.util.List;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,22 +26,12 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 @RestController
 @RequestMapping("/homePage")
+@RequiredArgsConstructor(onConstructor=@__(@Autowired))
 public class HomeController {
 
-  private CarouselService carouselService;
+  private final CarouselService carouselService;
 
-  private ArticleHandler articleHandler;
-
-
-  @Autowired
-  public void setCarouselService(CarouselService carouselService) {
-    this.carouselService = carouselService;
-  }
-
-  @Autowired
-  public void setArticleService(ArticleHandler articleHandler) {
-    this.articleHandler = articleHandler;
-  }
+  private final ArticleHandler articleHandler;
 
   /**
    * 首页轮播图

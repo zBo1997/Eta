@@ -30,10 +30,10 @@ spring:
         validationQuery: select 1
         testWhileIdle: true
         testOnBorrow: true
-        minIdle: 10
-        maxActive: 100
-        initialSize: 1
-        maxWait: 60000
+        minIdle: 1
+        maxActive: 2
+        initialSize: 10
+        maxWait: 2000
         timeBetweenEvictionRunsMillis: 6000
         poolPreparedStatements: true
         logAbandoned: true
